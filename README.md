@@ -4,6 +4,7 @@ Contohnya adalah seperti masukan namasitus.com/namakamu nanti akan muncul sesuat
 KNTLCMS ini berlisensi opensource dan boleh dipakai gratis asalkan jangan hilangkan watermark / atribut KNTLCMS dan dilarang distribusi KNTLCMS untuk mendapatkan uang
 
 ## Syarat WebServer
+* Linux apa aja terserah asal bisa php (Pemberi harapan palsu) 7.0 dan nginx
 * PHP 7.0 keatas (belum dites di php 5.6 kebawah tapi ini CMS di debug memakai PHP 7.1)
 * VPS (pake hosting bisa tapi tidak maksimal dan tidak direkomendasi)
 * MySQL
