@@ -16,7 +16,7 @@ KNTLCMS ini berlisensi opensource dan boleh dipakai gratis asalkan jangan hilang
 * lakukan instalasi . pastikan detail database mysql benar
 * KNTLCMS sukses terinstall
 <b>
-WARNING! setelah melakukan install . instalasi KNTLCMS anda hanya bia dipakai memakai namasitus.com/nama?namakamu bukan namasitus.com/namakamu . untuk fix masalah ini silahkan ikuti cara selanjutnya</b>
+WARNING! setelah melakukan install . instalasi KNTLCMS anda hanya bia dipakai memakai namasitus.com/?nama=namakamu bukan namasitus.com/namakamu . untuk fix masalah ini silahkan ikuti cara selanjutnya</b>
 
 ## Cara Agar bisa namasitus.com/namakamu
 <b>WARNING! Hanya untuk VPS saja . dan hanya untuk webserver nginx saja . jika memakai apache mohon murtad ke nginx untuk mengaktifkan fitur ini . tidak work untuk hosting</b><br>
