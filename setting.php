@@ -100,7 +100,12 @@ file_put_contents('config.php', '<?php return ' . var_export($config, true) . ';
 	        $notice_bold = "Terjadi Kesalahan!  ";
             $notice = "Range Minimal tidak boleh lebih besar dari range max";
 	}}}
-
+ if (strpos($_SERVER["SERVER_SOFTWARE"], "apache") !== false) { 
+$notice_display = "";
+	        $notice_type = "warning";
+	        $notice_bold = "Perhatian! ";
+            $notice = "KNTLCMS berjalan pada server apache / hosting . karena itu fitur site.com/nama tidak akan work . gunakan site.com/?nama=namakamu . untuk memperbaiki error ini silahkan gunakan nginx";
+ }
 $conn->close();
 ?> 
 <html lang="en"><head>
@@ -185,12 +190,12 @@ $conn->close();
 	<br>
 	<b>Nama Server :</b> <?php echo $_SERVER['SERVER_NAME'];  ?>
 	<br>
-	<b>Host HTTP :</b> <?php echo $_SERVER['HTTP_HOST'];  ?>
+	<b>Host HTTP / Alamat Website :</b> <?php echo $_SERVER['HTTP_HOST'];  ?>
 	<br>
 	<b>Versi PHP (Pemberi Harapan Palsu) :</b> <?php echo  phpversion() ?>
 	<br>
 	<h3>Informasi KNTLCMS</h3>
-	<b>Versi KNTLCMS :</b> Beta 093017
+	<b>Versi KNTLCMS :</b> Beta 100417
 	<br>
 	<b>Lisensi :</b> <?php
 if($config['reg_kode'] == md5($config['reg_nama'] . "KNTL69!") ){
@@ -321,25 +326,7 @@ if($config['reg_kode'] == md5($config['reg_nama'] . "KNTL69!") ){
 
 <!-- Select Basic -->
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="baon">BAON CIKADAP™ x KNTLCMS</label>
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="baon-0">
-      <input name="baon" id="baon-0" value="kontol" <?php echo $checked_baon_on ?> type="radio">
-      Nyalakan Lagu Baon Cikadap
-    </label>
- 	</div>
-	  <div class="radio">
-    <label for="baon-1">
-      <input name="baon" id="baon-1" value="memek" <?php echo $checked_baon_off ?>type="radio">
-      Matikan Lagu Baon Cikadap
-    </label>
-		  <span class="help-block">FITUR INI MASIH EXPERIMENTAL <b>BAON CIKADAP™ x KNTLCMS</b> adalah hasil kolaborasi KNTLCMS dengan rapper baon cikadap untuk memberi lagu baon cikadap ke setiap pengunjung website anda . fitur ini secara default dimatikan</span> 
 
-	</div>
-  </div>
-</div>
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
