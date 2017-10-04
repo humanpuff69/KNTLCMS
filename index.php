@@ -67,7 +67,7 @@ $resultx = $conn->query($sqlx);
 
 
 if ($config['prefix_nama'] == "ada") {
-			$display = $_GET['nama'] . " " . $display ;
+			$display = $user . " " . $display ;
 		}
 	
 } 
