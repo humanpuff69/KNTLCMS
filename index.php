@@ -48,7 +48,7 @@ $resultq = $conn->query($sqlq);
         } else if ($row['image_url'] == "") {
             $gambar = $config['gambar_default'];
         } else {
-            $gambar = $row['image_gambar'];
+            $gambar = $row['image_url'];
         }
 		
 
