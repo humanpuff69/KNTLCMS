@@ -90,7 +90,7 @@ $conn->close();
 <meta property="og:type"               content="article" />
 <meta property="og:title"              content="<?php echo $display ?>" />
 <meta property="og:description"        content="<?php echo $slogan ?>"/>
-<meta property="og:image"              content="<?php echo $config["gambar_default"] ?>" />
+<meta property="og:image"              content="<?php echo $gambar ?>" />
 
 
     <title><?php echo $display ?></title>
