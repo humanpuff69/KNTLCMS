@@ -146,6 +146,8 @@ $conn->close();
 			<br>
 			<div class="fb-share-button" data-href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F<?php echo $_SERVER['HTTP_HOST'];  ?>%2F&amp;src=sdkpreparse">Bagikan ke teman kamu di facebook</a></div>
 		  </div>
+		 <hr>
+		 <div class="fb-comments" data-href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>" data-numposts="10"></div>
 	  </div>
  <!-- /.container -->
 		
