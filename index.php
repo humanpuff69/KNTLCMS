@@ -3,16 +3,12 @@ $config = include 'config.php';
     $gambar = $config['gambar_default'];
 $get = $_SERVER['REQUEST_URI'];
 $get = explode("/", $get);
-if (count($get)< 3) { //klo di hosting ganti 2
+
 	$user = $_GET['nama'];
 $user = str_replace("/","",$user);
 $user = htmlspecialchars($user, ENT_QUOTES, 'UTF-8');
 
-} else {
-$user = $get[2]; //klo di hosting ganti 1
-$user = str_replace("/","",$user);
-$user = htmlspecialchars($user, ENT_QUOTES, 'UTF-8');
-}
+
 if ($config['installed'] == "sudah") {
 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
 // Check connection
