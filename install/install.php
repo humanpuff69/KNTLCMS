@@ -25,8 +25,8 @@ if($conn->connect_error) {
 
 	file_put_contents('../config.php', '<?php return ' . var_export($config, true) . ';');
 	sleep(5);
-	$sql = " CREATE TABLE `counter` ( `counter` INT( 20 ) NOT NULL );
- INSERT INTO counter VALUES (0); ";
+	$sql = " CREATE TABLE `counter` ( `counter` INT( 20 ) NOT NULL );";
+ $sql1 = "INSERT INTO counter VALUES (0); ";
 		$sql2 = "CREATE TABLE `entri` (
   `id` int(11) NOT NULL,
   `judul` text NOT NULL,
@@ -49,7 +49,7 @@ if($conn->connect_error) {
 		$sql7 = "ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;";
 
-if  ($conn->query($sql) === TRUE AND $conn->query($sql2) === TRUE  AND $conn->query($sql3) === TRUE AND $conn->query($sql4) === TRUE AND $conn->query($sql5) === TRUE AND $conn->query($sql6) === TRUE AND $conn->query($sql7) === TRUE AND $conn->query($sqlx) === TRUE ) {
+if  ($conn->query($sql) === TRUE AND $conn->query($sql1) === TRUE AND $conn->query($sql2) === TRUE  AND $conn->query($sql3) === TRUE AND $conn->query($sql4) === TRUE AND $conn->query($sql5) === TRUE AND $conn->query($sql6) === TRUE AND $conn->query($sql7) === TRUE AND $conn->query($sqlx) === TRUE ) {
   header('Location: finish.php');
 } else {
    die("Terjadi Error saat membuat tabel . pastikan user yang anda berikan memiliki pemission full terhadap database tersebut" . $conn->error);
