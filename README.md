@@ -11,7 +11,7 @@ KNTLCMS ini berlisensi opensource dan boleh dipakai gratis asalkan jangan hilang
 * nginx (pake apache bisa tapi tidak maksimal . lebih baik murtad ke nginx)
 
 ## Cara Install
-* Clone seluruh repository KNTLCMS 
+* Clone seluruh repository KNTLCMS atau gak download source code di bagian release
 * chmod file config.php menjadi 766
 * Pergi ke namasitus.com/install
 * lakukan instalasi . pastikan detail database mysql benar
