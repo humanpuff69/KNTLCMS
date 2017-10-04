@@ -69,15 +69,7 @@ $resultx = $conn->query($sqlx);
 
 
 
-If ( $config['baon'] == "kontol") {
-	$baon =  "<audio controls autoplay style=" . '"'.  "display:none" . '"'.  ">
-  <source src=" . '"'.  "http://kontolerz.byethost6.com/baon.ogg" . '"'.  " type=" . '"'.  "audio/ogg" . '"'.  ">
-  <source src=" . '"'.  "http://kontolerz.byethost6.com/baon.mp3" . '"'.  " type=" . '"'.  "audio/mpeg" . '"'.  ">
-  Browser kamu tidak support elemen audio . upgrade browsermu!
-</audio> ";
-} else {
-	$baon = "";
-}
+
 if ($config['prefix_nama'] == "ada") {
 			$display = $_GET['nama'] . " " . $display ;
 		}
@@ -128,40 +120,38 @@ $conn->close();
   </head>
 
   <body>
-	  <?php echo $baon ?>
+	  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	  <a href="https://github.com/humanpuff69/KNTLCMS"><img style="position: absolute; top: 0; right: 0; border: 0 ; z-index: 999999999999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	
    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+	 
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+	
           <a class="navbar-brand" href="#"><?php echo $config['nama_website'] ?></a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="https://www.facebook.com/mgfakhri">Created By : humanpuff69</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        
       </div>
     </nav>
 
-    <div class="container">
-
-      <div class="starter-template">
+	  <div class="container">
+		<div class="starter-template">
 		  <br>
-		  <center><img src="<?php echo $gambar ?>"><img><center>
-        <h1><?php
-	echo $display;
-?>
-			  </h1>
+		  <center><img src="<?php echo $gambar ?>" width="300px" height="300px"><img></center>
+        <h1><?php echo $display; ?> </h1>
 			  <p class="lead"><b><?php echo $user ?></b> <?php echo $config['desc_website'] ?></p>
-      </div>
-
-    </div><!-- /.container -->
+			<br>
+			<div class="fb-share-button" data-href="http://<?php echo $_SERVER['HTTP_HOST'];  ?>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F<?php echo $_SERVER['HTTP_HOST'];  ?>%2F&amp;src=sdkpreparse">Bagikan ke teman kamu di facebook</a></div>
+		  </div>
+	  </div>
+ <!-- /.container -->
 		
 
     <!-- Bootstrap core JavaScript
@@ -173,5 +163,5 @@ $conn->close();
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://getbootstrap.com/docs/3.3//assets/js/ie10-viewport-bug-workaround.js"></script>
 
-Powered by KNTLCMS <!-- awas kalau lu hapus ngentod . gw cape cape buat cms dari PHP (pemberii harapan palsu) malah gak dihargain yoga! --> 
+<center><h3><span class="label label-success">Powered by <a href="https://github.com/humanpuff69/KNTLCMS/">KNTLCMS</a></span></h3></center><!-- awas kalau lu hapus ngentod . gw cape cape buat cms dari PHP (pemberii harapan palsu) malah gak dihargain yoga! --> 
 </body></html>
