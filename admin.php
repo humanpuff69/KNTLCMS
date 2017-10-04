@@ -96,7 +96,7 @@ $conn->close();
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
 				<h1><?php
-					$rows = mysqli_num_rows($result);
+					$rows = mysqli_num_rows($result2);
 echo $rows;
 					?></h1>
               <h4>Jumlah Entri</h4>
