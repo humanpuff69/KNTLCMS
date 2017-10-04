@@ -64,8 +64,9 @@ sleep(5);
 
       <div class="starter-template">
         <h1>Selamat! KNTLCMS Sukses Diinstall</h1>
-        <p class="lead">Silahkan Login di NAMA_WEBSITE/admin.php dan jangan lupa hapus folder install demi keamanan<br>KNTLCMs ini masih dalam tahap beta . jangan lupa laporkan bug ke creator . terimakasih sudah memakai KNTLCNS</p>
-      </div>
+        <p class="lead">Silahkan Login di <?php echo $_SERVER['HTTP_HOST'];  ?>/admin.php dan jangan lupa hapus folder install demi keamanan<br>KNTLCMS ini masih dalam tahap beta . jangan lupa laporkan bug ke creator lewat github (bukan pr*nhub tolo). terimakasih sudah memakai KNTLCNS</p>
+		  <a href="../admin.php"><button type="button" class="btn btn-lg btn-success">Pergi Ke Admin Panel</button></a>
+		</div>
 
     </div><!-- /.container -->
 
