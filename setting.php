@@ -195,7 +195,7 @@ $conn->close();
 	<b>Versi PHP (Pemberi Harapan Palsu) :</b> <?php echo  phpversion() ?>
 	<br>
 	<h3>Informasi KNTLCMS</h3>
-	<b>Versi KNTLCMS :</b> Beta 100417
+	<b>Versi KNTLCMS :</b> Beta 100517
 	<br>
 	<b>Lisensi :</b> <?php
 if($config['reg_kode'] == md5($config['reg_nama'] . "KNTL69!") ){
@@ -282,7 +282,14 @@ if($config['reg_kode'] == md5($config['reg_nama'] . "KNTL69!") ){
 <div class="form-group">
   <label class="col-md-4 control-label" for="prefix_entri">prefix Text Entri</label>  
   <div class="col-md-4">
-  <input id="prefix_entri" name="prefix_entri" placeholder=" Tempat terbaik untuk kamu adalah" class="form-control input-md"  type="text" required="" value="<?php echo $config['prefix_entri'] ?>">
+  <input id="prefix_entri" name="prefix_entri" placeholder="lagu terbaik untuk kamu adalah" class="form-control input-md"  type="text"  value="<?php echo $config['prefix_entri'] ?>">
+  <span class="help-block">Hanya perlu dimasukan jika memakai mode entri . masukan prefix text yang ingin dimunculkan sebelum judul entri</span>  
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="sufix_entri">sufix Text Entri</label>  
+  <div class="col-md-4">
+  <input id="sufix_entri" name="sufix_entri" placeholder=" adalah lagu terbaik untuk kamu" class="form-control input-md"  type="text"  value="<?php echo $config['prefix_entri'] ?>">
   <span class="help-block">Hanya perlu dimasukan jika memakai mode entri . masukan prefix text yang ingin dimunculkan sebelum judul entri</span>  
   </div>
 </div>
