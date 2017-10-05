@@ -11,6 +11,7 @@
   'prefix_nama' => 'ada',
   'web_mode' => 'entri',
   'prefix_entri' => '',
+  'sufix_entri' => '',
   'prefix_acak' => '',
   'sufix_acak' => '',
   'acak_range_start' => '0',
