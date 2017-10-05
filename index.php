@@ -1,4 +1,9 @@
 <?php
+//KNTLCMS by humanpuff69
+// https://github.com/humanpuff69/KNTLCMS
+// MIT LICENSE . DILARANG KERAS DISTRIBUSI UNTUK MENDAPATKAN UANG (MONETIZE)
+
+
 $config = include 'config.php';
     $gambar = $config['gambar_default'];
 $get = $_SERVER['REQUEST_URI'];
@@ -40,7 +45,7 @@ $resultq = $conn->query($sqlq);
 		if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $display = $config['prefix_entri'] . " " . $row['judul'];
+        $display = $config['prefix_entri'] . " " . $row['judul'] . " " . $config['sufix_entri'];
 		$kntl = $row['id'];
         $sqlx = "UPDATE entri SET view = view +1 WHERE id=$kntl";
         if ($row['image_default'] == "True" ) {
@@ -68,7 +73,8 @@ $resultx = $conn->query($sqlx);
 
 if ($config['prefix_nama'] == "ada") {
 			$display = $user . " " . $display ;
-		}
+	 }
+
 	
 } 
 	
